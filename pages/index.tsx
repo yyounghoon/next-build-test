@@ -2,8 +2,10 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 export default function Home() {
+    const router = useRouter();
     return (
         <div className={styles.container}>
             <Head>
@@ -16,11 +18,20 @@ export default function Home() {
                 <h1>
                     <Link href="/csr">CSR로 이동</Link>
                 </h1>
+                <h1 onClick={() => router.push('/csr')}>
+                    CSR로 이동 (router.push)
+                </h1>
                 <h1>
                     <Link href="/ssr">SSR로 이동</Link>
                 </h1>
+                <h1 onClick={() => router.push('/ssr')}>
+                    SSR로 이동 (router.push)
+                </h1>
                 <h1>
                     <Link href="/ssg">SSG로 이동</Link>
+                </h1>
+                <h1 onClick={() => router.push('/ssg')}>
+                    SSG로 이동 (router.push)
                 </h1>
                 <h1>
                     <Link href="/isr">ISR로 이동</Link>
