@@ -1,5 +1,6 @@
 import Head from "next/head";
 import {GetServerSideProps} from "next";
+import Link from "next/link";
 
 export async function getServerSideProps() {
     console.log('server')
@@ -24,6 +25,7 @@ const SSR = ({time}: Props) => {
             </Head>
             <div>
                 <h1>SSR</h1>
+                <Link href={"/"}>홈으로</Link>
                 <h2>{time}</h2>
             </div>
         </div>

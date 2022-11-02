@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export async function getStaticProps() {
     console.log('server')
@@ -23,6 +24,7 @@ const SSG = ({time}: Props) => {
             </Head>
             <div>
                 <h1>SSG</h1>
+                <Link href={"/"}>홈으로</Link>
                 <h2>{time}</h2>
             </div>
         </div>

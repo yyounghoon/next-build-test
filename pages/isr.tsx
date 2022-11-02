@@ -1,5 +1,6 @@
 import Head from "next/head";
 import {GetStaticProps} from "next";
+import Link from "next/link";
 
 export const getStaticProps: GetStaticProps = async () => {
     console.log('server')
@@ -24,6 +25,7 @@ const ISR = ({time}: Props) => {
                 <link rel="icon" href="/favicon.ico"/>
             </Head>
             <div>
+                <Link href={"/"}>홈으로</Link>
                 <h1>ISR</h1>
                 <h2>{time}</h2>
             </div>

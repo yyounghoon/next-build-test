@@ -1,6 +1,7 @@
 import exp from "constants";
 import Head from "next/head";
 import {useEffect, useState} from "react";
+import Link from "next/link";
 
 
 const CSR = () => {
@@ -17,6 +18,7 @@ const CSR = () => {
             </Head>
             <div>
                 <h1>CSR</h1>
+                <Link href={"/"}>홈으로</Link>
                 <h2>{time}</h2>
             </div>
         </div>
