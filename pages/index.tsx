@@ -27,6 +27,9 @@ export default function Home() {
                 <h1 onClick={() => router.push('/ssr')}>
                     SSR로 이동 (router.push)
                 </h1>
+                <a href={"/ssr"}>
+                    SSR로 이동 (a 태그)
+                </a>
                 <h1>
                     <Link href="/ssg">SSG로 이동</Link>
                 </h1>
